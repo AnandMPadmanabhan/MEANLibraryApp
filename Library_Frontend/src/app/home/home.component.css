@@ -1,0 +1,24 @@
+#masthead {
+    min-height:540px;
+    background-color:#333335;
+    color:#aaaacc;
+    background-image: url('./images/library.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+  }
+  
+  
+  #masthead h1 {
+    font-size: 55px;
+    line-height: 1;
+    color:#fefeff;
+    margin-top:80px;
+  }
+  
+  #masthead .well {
+    margin-top:31px;
+    background-color:#353535;
+    border-color:#676769;
+    color:#efefff;
+    min-height:127px;
+  }

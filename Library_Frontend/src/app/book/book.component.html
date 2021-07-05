@@ -1,0 +1,53 @@
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>{{title}}
+          <p class="lead"></p>
+        </h1>
+      </div>
+      <div class="col-md-5">
+      </div>
+    </div> 
+  </div><!-- /cont -->
+
+</div>
+<div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="card">
+          <div class="card-body">
+            
+            
+
+            <div class="row">    
+              <br>
+              <div class="col-md-2 col-sm-3 text-center">
+                <a class="story-title"><img alt="" [src]="'data:image/'+book.image.contentType+';base64,'+book.imageUrl | safe" style="width:100px;height:100px" class="rounded-circle"></a>
+              </div>
+              <div  class="col-md-10 col-sm-7">
+                <h3>{{book.title}}</h3>
+                <div class="row">
+                  <div class="col-xs-9">
+                    <h4><span class="badge badge-secondary">{{book.author}}</span></h4>
+                    <h4><small style="font-family:courier,'new courier';" class="text-muted">{{book.genre}}</small></h4>
+                </div>
+
+                </div>
+                <br><br>
+              </div>
+            </div>
+
+            <hr>
+
+            
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>

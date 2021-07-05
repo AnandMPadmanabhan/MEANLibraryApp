@@ -1,0 +1,69 @@
+<div *ngIf="updateClicked" id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>{{title}}
+          <p class="lead"></p>
+        </h1>
+      </div>
+      <div class="col-md-5">
+        <div class="well well-lg"> 
+          <div class="row">
+            <div class="col-sm-12">
+              
+			
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+</div>
+
+
+
+<div *ngIf="updateClicked" class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="card">
+          <div class="card-body">
+            
+            
+
+            <div *ngFor="let book of books" class="row">    
+              <br>
+              <div class="col-md-2 col-sm-3 text-center">
+                <a class="story-title"><img alt="" [src]="'data:image/'+book.image.contentType+';base64,'+book.imageUrl | safe" style="width:100px;height:100px" class="rounded-circle"></a>
+              </div>
+              <div  class="col-md-10 col-sm-7">
+                <h3>{{book.title}}</h3>
+                <div class="row">
+                  <div class="col-xs-9">
+                    <h4><span class="badge badge-secondary">{{book.author}}</span></h4><h4>
+                    <small style="font-family:courier,'new courier';" class="text-muted">{{book.genre}}
+                      <a  class="text-muted" routerLink="/book" [queryParams]="{ bookid: book._id }">Read More</a></small>
+                    </h4></div>
+
+                  <div class="col-xs-5" style="margin-left: 20px;">
+                    <a class="btn btn-primary"  *ngIf="_auth.isAdmin()" (click)="delete_Click(book._id)" role="button">Delete</a>
+                    <a class="btn btn-primary" *ngIf="_auth.isAdmin()" routerLink="update" [queryParams]="{ bookid: book._id }" style="margin-left: 5px;" (click)="update_Click()" role="button">Update</a>
+                  </div>
+                </div>
+                <br><br>
+              </div>
+            </div>
+
+            <hr>
+
+            
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>
+  <router-outlet></router-outlet>

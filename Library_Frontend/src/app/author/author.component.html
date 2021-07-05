@@ -1,0 +1,58 @@
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>{{title}}
+          <p class="lead"></p>
+        </h1>
+      </div>
+      <div class="col-md-5">
+      </div>
+    </div> 
+  </div><!-- /cont -->
+
+</div>
+
+
+<div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="card">
+          <div class="card-body">
+            
+            
+            
+            <!--/stories-->
+            <div class="row">    
+              <br>
+              <div class="col-md-2 col-sm-3 text-center">
+                <a class="story-title"><img alt="" [src]="'data:image/'+author.image.contentType+';base64,'+author.imageUrl | safe" style="width:150px;height:150px" class="rounded-circle"></a>
+              </div>
+              <div class="col-md-10 col-sm-9">
+                <h3>{{author.title}}</h3>
+                <div class="row">
+                  <div class="col-xs-9">
+                    <h4><span class="label label-default">{{author.period}}</span></h4>
+                    <h4>
+                    {{author.genre}}
+                    </h4>
+                    <p>{{author.description}}</p>
+                  </div>
+                  <div class="col-xs-3"></div>
+                </div>
+                <br><br>
+              </div>
+            </div>
+            <hr>
+            <!--/stories-->
+            
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>

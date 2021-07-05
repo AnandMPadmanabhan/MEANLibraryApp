@@ -1,0 +1,74 @@
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>{{title}}
+          <p class="lead"></p>
+        </h1>
+      </div>
+      <div class="col-md-5">
+      </div>
+    </div> 
+  </div><!-- /cont -->
+
+</div>
+
+
+<div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="card">
+          <div class="card-body">
+            
+            
+            
+            <!--/stories-->
+            <div class="row">    
+              <br>
+              <div class="col-md-2 col-sm-3 text-center">
+      
+              </div>
+              <div class="col-md-6 col-sm-9">
+                  <form [formGroup]="authorupdateForm" (ngSubmit)="add_updateAuthor()">
+                      <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" class="form-control" placeholder="Enter title" [value]="author.title" formControlName="title" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="period">Period:</label>
+                        <input type="text" class="form-control" placeholder="Enter period" [value]="author.period" formControlName="period" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="genre">Genre:</label>
+                          <input type="text" class="form-control" placeholder="Enter genre" [value]="author.genre" formControlName="genre" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="desc">Description:</label>
+                          <textarea class="form-control" placeholder="Enter description" rows="4" [value]="author.description" formControlName="description"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <label for="desc">Image:</label>
+                          <input type="file" class="form-control" placeholder="Upload image" name="img" (change)="selectImage($event)" accept="image/png, image/gif, image/jpeg" required>
+                        </div>
+                        <input type="submit" class="btn btn-primary" [value]='btnText'>
+                    </form>
+                </div>
+                  <div class="col-xs-3"></div>
+                </div>
+                <br><br>
+              </div>
+            </div>
+            
+            <!--/stories-->
+            
+  
+            
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+ 
